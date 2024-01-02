@@ -12,8 +12,8 @@ public static void main(String args[]) {
 	    System.out.println("Enter the breath of the rectange");
 	    breath=sc.nextInt();
       
-      for(int i=0;i<breath;i++) {
-    	  for(int j=0;j<lenght;j++) {
+	      for(int i=0;i<breath;i++) {
+	    	  for(int j=0;j<lenght;j++) {
     		 
     	  System.out.print("* ");
     	  }
