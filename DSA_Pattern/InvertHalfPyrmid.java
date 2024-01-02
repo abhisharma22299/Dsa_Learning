@@ -3,8 +3,21 @@ package DSA_Pattern;
 import java.util.Scanner;
 
 public class InvertHalfPyrmid {
+	
+	// main class
 	public static void main(String args[]) {
-		// printing the pattern of half pyramid
+		// printing the pattern of inverted half  pyramid
+		/*
+		  
+		          *
+		        * *
+		      * * *
+		    * * * *
+		  * * * * *
+		  
+		 */
+		System.out.println("Printing the pattern");
+		System.out.println();
 		// variable declaration the variables
 		int lines;
 		System.out.println("Enter the number of line you want to print "

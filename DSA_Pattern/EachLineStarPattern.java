@@ -6,7 +6,18 @@ public class EachLineStarPattern {
 	// main class
 	public static void main(String args[]) {
 	// printing the pattern of half pyramid
-	// variable declaration the variables
+		/*
+		 
+		  *
+		  * *
+		  * * *
+		  * * * *
+		  * * * * *
+          * * * * *	*	  
+		 */
+		// variable declaration the variables
+		
+		
 		int lines;
 		
 		System.out.println("Enter the number of line you want to print "
@@ -14,7 +25,8 @@ public class EachLineStarPattern {
 		
 		Scanner sc=new Scanner(System.in);
 		    lines=sc.nextInt();
-		    
+		    System.out.println("Printing the pattern");
+			System.out.println();
 		    // outer loop
 		for(int i=0;i<lines;i++) {
 			 // inner loop

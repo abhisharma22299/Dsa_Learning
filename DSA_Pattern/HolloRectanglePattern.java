@@ -3,8 +3,19 @@ package DSA_Pattern;
 import java.util.Scanner;
 
 public class HolloRectanglePattern {
+	
+	// main class
 	public static void main(String args[]) {
-		// printing the pattern of half pyramid
+		// printing the pattern of hollo rectangle pyramid
+		/*
+		 
+		 *****
+		 *   * 
+		 *   *
+		 *   *
+		 *****
+		 
+		 */
 		// variables declaration the variables
 		int rows;
 		int columns;
@@ -13,12 +24,15 @@ public class HolloRectanglePattern {
 		    rows=sc.nextInt();
 		    System.out.println("Enter the columns of the rectange");
 		    columns=sc.nextInt();
+		    
+		    System.out.println("Printing the pattern");
+			System.out.println();
 		 // outer loop
 		    for(int i=1;i<=rows;i++) {
 		    	
 		    	// inner loop
 		    	  for(int j=1;j<=columns;j++) {
-	
+	                  // checking some conditions
 		    		  if(i==1 || j== 1 || i==rows || j == columns ) {
 		    			//printing the starts
 		    			  System.out.print("* ");
@@ -29,6 +43,8 @@ public class HolloRectanglePattern {
 		    		  }
 		    		 
 		    	  }
+		    	  
+		    	//printing the new line
 		    	  System.out.println();
 		    }
 	}
