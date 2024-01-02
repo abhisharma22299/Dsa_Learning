@@ -23,7 +23,7 @@ public class HalfPyramidWithNumbers {
 			    lines=sc.nextInt();
 		System.out.println("Printing the pattern");
 		System.out.println();
-	  // outer loops
+	  // outer loops	
 		for(int i=1;i<=lines;i++) {
 			// inner loops
            for(int j =1;j<=i;j++) {
