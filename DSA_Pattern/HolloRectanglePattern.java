@@ -25,8 +25,7 @@ public class HolloRectanglePattern {
 		    System.out.println("Enter the columns of the rectange");
 		    columns=sc.nextInt();
 		    
-		    System.out.println("Printing the pattern");
-			System.out.println();
+		    
 		 // outer loop
 		    for(int i=1;i<=rows;i++) {
 		    	
