@@ -38,7 +38,7 @@ public class StarPyramidPattern {
 					System.out.print(" ");
 					
 				}
-				// inner loop printing the stars
+				// inner loop printing the stars	
 				for(int j=1;j<=i;j++) {
 			if(j==1) {
 				System.out.print("*");
@@ -48,6 +48,7 @@ public class StarPyramidPattern {
 			}
 			
 				}
+				// new line 
 				System.out.println();
 			}
 			}
