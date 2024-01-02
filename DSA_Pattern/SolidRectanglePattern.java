@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class SolidRectanglePattern {
 public static void main(String args[]) {
+	// printing the pattern of half pyramid
+		// variable declaration the variables
 	int lenght;
 	int breath;
 	System.out.println("Enter the length of the rectange");
