@@ -37,21 +37,17 @@ public class DimandPyramidPattern {
 					    lines=sc.nextInt();
 					    System.out.println("Printing the pattern");
 						System.out.println();
-						// outer loop		
+				
+				// outer part
 				for(int i = 1;i<=lines;i++) {
 					// inner loop
 					for(int j=lines-i ;j>=1;j--) {
-						System.out.print(" ");
+						System.out.print("  ");
 						
 					}
 					// inner loop printing the stars	
-					for(int j=1;j<=i;j++) {
-				if(j==1) {
-					System.out.print("*");
-				}
-				else {
-					System.out.print("**");
-				}
+					for(int j=1;j<=2*i-1;j++) {
+				System.out.print("* ");
 				
 					}
 					// new line 
@@ -59,21 +55,16 @@ public class DimandPyramidPattern {
 				}
 				
 				// second half
-				// outer loop		
+				
 				for(int i = lines;i>=1;i--) {
 					// inner loop
 					for(int j=lines-i ;j>=1;j--) {
-						System.out.print(" ");
+						System.out.print("  ");
 						
 					}
 					// inner loop printing the stars	
-					for(int j=1;j<=i;j++) {
-				if(j==1) {
-					System.out.print("*");
-				}
-				else {
-					System.out.print("**");
-				}
+					for(int j=1;j<=2*i-1;j++) {
+				System.out.print("* ");
 				
 					}
 					// new line 
