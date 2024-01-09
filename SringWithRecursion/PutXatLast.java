@@ -4,6 +4,7 @@ public class PutXatLast {
 	public static StringBuilder str = new StringBuilder();
 	public static void Xlast(String s,int index) {
 		
+		//
 	}
 	
 	public static void main(String[] args) {
