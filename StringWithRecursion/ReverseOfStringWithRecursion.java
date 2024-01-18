@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 public class ReverseOfStringWithRecursion {
   public static void printRev(String str,int idx) {

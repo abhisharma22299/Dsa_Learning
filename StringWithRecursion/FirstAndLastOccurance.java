@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 public class FirstAndLastOccurance {
 	public static void printOcc(String str,int index, int first,int last,String findChar) {

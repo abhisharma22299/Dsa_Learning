@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 public class PutXatLast {
 	public static StringBuilder str = new StringBuilder();

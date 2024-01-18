@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 public class RemoveDuplicatesInAString {
 	public static boolean[] map=new boolean[26];

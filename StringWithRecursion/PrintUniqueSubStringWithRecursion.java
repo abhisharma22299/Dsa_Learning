@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 import java.util.HashSet;
 

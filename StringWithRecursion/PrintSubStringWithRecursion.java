@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 public class PrintSubStringWithRecursion {
 	public static void printAllSubSequence(String str ,int index,String newString) {

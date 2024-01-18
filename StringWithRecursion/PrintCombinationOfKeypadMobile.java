@@ -1,4 +1,4 @@
-package SringWithRecursion;
+package StringWithRecursion;
 
 public class PrintCombinationOfKeypadMobile {
 	public static String[] keypad= {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz",};
