@@ -17,7 +17,9 @@ class SingleLinkedList{
 	public void insertAtEnd(int newData) {
 		Node newNode=new Node(newData);
 		// checking linkedList is empty or not 
-	
+	if(head==null) {
+		
+	}
 	}
 	public static void main(String[] args) {
 			
