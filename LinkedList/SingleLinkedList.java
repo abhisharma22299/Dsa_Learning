@@ -1,43 +1,41 @@
 package LinkedList;
-class SingleLinkedList{
-	
+
+class SingleLinkedList {
+
 	Node head;
-	class Node{
+
+	class Node {
 		int data;
 		Node next;
-		Node (int d){
-			data=d;
-			next=null;
+
+		Node(int d) {
+			data = d;
+			next = null;
 		}
 	}
-	
-	
+
 	// implementation of insertion of a node at end
-	
+
 	public void insertAtEnd(int newData) {
-		Node newNode=new Node(newData);
-		// checking linkedList is empty or not 
-	if(head==null) {
-		head=new Node(newData);
-		return;
+		Node newNode = new Node(newData);
+		// checking linkedList is empty or not
+		// for linked list is empty
+		if (head == null) {
+			head = new Node(newData);
+			return;
+		}
+		// for linked list is not empty
+		// creating a temp Node
+            Node temp=head;
+		if (head != null) {
+
+		}
 	}
-	}
+
 	public static void main(String[] args) {
-			
-		
+
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 //public class SingleLinkedList {
 //	
