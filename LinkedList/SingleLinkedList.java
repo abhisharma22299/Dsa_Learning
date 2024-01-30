@@ -18,7 +18,8 @@ class SingleLinkedList{
 		Node newNode=new Node(newData);
 		// checking linkedList is empty or not 
 	if(head==null) {
-		
+		head=new Node(newData);
+		return;
 	}
 	}
 	public static void main(String[] args) {
