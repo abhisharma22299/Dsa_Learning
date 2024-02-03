@@ -7,7 +7,7 @@ public class OuputTest {
 		Integer num2=100;
 		Integer num3=500;
 		Integer num4=500;
-		
+		// 
 		if(num1==num2) {
 			System.out.println("Num 1 == num 2");
 		}
