@@ -26,14 +26,14 @@ class SingleLinkedList {
 			head = new Node(newData);
 			return;
 		}
-		newNode.next=null;
+		newNode.next = null;
 		// for linked list is not empty
 		// creating a temp Node
-            Node temp=head;
-		while(temp.next!=null) {
-			temp=temp.next;
+		Node temp = head;
+		while (temp.next != null) {
+			temp = temp.next;
 		}
-		temp.next=newNode;
+		temp.next = newNode;
 		return;
 	}
 	// implementation of insertion of a node at First
@@ -46,106 +46,69 @@ class SingleLinkedList {
 			head = new Node(newData);
 			return;
 		}
-		//newNode.next=null;
+		// newNode.next=null;
 		// for linked list is not empty
 		// creating a temp Node
-            Node temp=newNode;
-           temp.next=head;
-           head=temp;
+		Node temp = newNode;
+		temp.next = head;
+		head = temp;
 		return;
 	}
 
-// implementation of the printing a linked List
+	// implementation of insertion of a node at any any node
+	public void insertAtIndex(Node prev, int data) {
+		Node newNode = new Node(data);
+		newNode.next = prev.next;
+		prev.next = newNode;
+
+	}
+
+	// loops
+	public void inserti(int data, int idx) {
+		Node temp = new Node(data);
+		int i = 1;
+		temp = head;
+		while (i < idx) {
+			temp = temp.next;
+
+			i++;
+
+		}
+		insertAtIndex(temp, data);
+	}
+
+	// implementation of the printing a linked List
 	public void printLnikedList() {
-		Node temp=head;
-		while(temp.next!=null) {
-			System.out.print(temp.data+"  ");
-			temp=temp.next;
+		Node temp = head;
+		while (temp.next != null) {
+			System.out.print(temp.data + "  ");
+			temp = temp.next;
 		}
 	}
+
 	public static void main(String[] args) {
-	SingleLinkedList list=new SingleLinkedList();
-	
-	list.insertAtEnd(2);
-	list.insertAtEnd(3);
-	list.insertAtEnd(4);
-	list.insertAtEnd(5);
-	list.insertAtEnd(6);
-	list.insertAtEnd(7);
-	list.insertAtEnd(8);
-	list.insertAtEnd(9);
-	list.printLnikedList();
-	
-	list.insertAtFirst(22);
-	System.out.println();
-	list.printLnikedList();
-list.insertAtFirst(20);
-System.out.println();
-list.printLnikedList();
+		SingleLinkedList list = new SingleLinkedList();
+
+		list.insertAtEnd(2);
+		list.insertAtEnd(3);
+		list.insertAtEnd(4);
+		list.insertAtEnd(5);
+		list.insertAtEnd(6);
+		list.insertAtEnd(7);
+		list.insertAtEnd(8);
+		list.insertAtEnd(9);
+		list.printLnikedList();
+
+		list.insertAtFirst(22);
+		System.out.println();
+		list.printLnikedList();
+		list.insertAtFirst(20);
+		System.out.println();
+		list.printLnikedList();
+
+		// at index
+		list.inserti(121, 1);
+		System.out.println();
+		list.printLnikedList();
 	}
 }
-
-//public class SingleLinkedList {
-//	
-//	static Node head;
-//	class Node{
-//		String Data;
-//		Node next;
-//		
-//		
-//		public Node(String data) {
-//
-//			this.Data = data;
-//			this.next = next;
-//		}
-//		
-//	}
-//	
-//	
-//	// add first
-//	
-//	public static void addFirst(String data) {
-//		Node newNode=new Node(data);
-//		if(head == null) {
-//			head=newNode;
-//		}
-//		newNode.next=head;
-//		head=newNode;
-//		
-//	}
-//	// add Last
-//	
-//		public static void addLast(String data) {
-//			Node newNode=new Node(data);
-//			if(head == null) {
-//				head=newNode;
-//			}
-//			Node currNode=head;
-//			while(currNode!= null) {
-//				currNode=currNode.next;
-//			}
-//			currNode.next=newNode;
-//		}
-//		
-//		// print
-//		public static void printLinkedList() {
-//			Node currNode=head;
-//			if(head==null) {
-//				System.out.println("List is empty");
-//				return;
-//			}
-//			while(currNode !=null) {
-//			System.out.print(currNode.Data+" -> ");
-//				currNode = currNode.next;
-//				
-//			}
-//			currNode.next=newNode;
-//			System.out.println("null");
-//		}
-//public static void main(String[] args) {
-//	SingleLinkedList sll=new SingleLinkedList();
-//	sll.addFirst(" A ");
-//	sll.addFirst(" IS ");
-//	sll.printLinkedList();
-//}
-//}
