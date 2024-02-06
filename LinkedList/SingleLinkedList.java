@@ -1,11 +1,8 @@
 package LinkedList;
-
 import Recursion.printSubsetOfNaturalNumber;
-
 class SingleLinkedList {
 
 	Node head;
-
 	class Node {
 		int data;
 		Node next;
@@ -62,7 +59,6 @@ class SingleLinkedList {
 		prev.next = newNode;
 
 	}
-
 	// loops
 	public void inserti(int data, int idx) {
 		Node temp = new Node(data);
@@ -86,9 +82,36 @@ class SingleLinkedList {
 		}
 	}
 
-	public static void main(String[] args) {
-		SingleLinkedList list = new SingleLinkedList();
+	// deletion
+	public void deletionFromHead() {
+		Node temp = head;
+		head = temp.next;
+	}
 
+	public void deletionAtIndex(int idx) {
+		if(idx==0) {
+			Node temp2=head;
+			head=temp2.next;
+			return;
+		}
+		
+		if (head == null ) {
+			return;
+		}
+		int i = 1;
+		Node temp = head;
+		while (temp.next != null && idx != i) {
+
+			temp = temp.next;
+			i++;
+		}
+		temp.next = temp.next.next;
+		return;
+	}
+
+	public static void main(String[] args) {
+
+		SingleLinkedList list = new SingleLinkedList();
 		list.insertAtEnd(2);
 		list.insertAtEnd(3);
 		list.insertAtEnd(4);
@@ -98,17 +121,24 @@ class SingleLinkedList {
 		list.insertAtEnd(8);
 		list.insertAtEnd(9);
 		list.printLnikedList();
-
 		list.insertAtFirst(22);
 		System.out.println();
 		list.printLnikedList();
 		list.insertAtFirst(20);
 		System.out.println();
 		list.printLnikedList();
-
 		// at index
 		list.inserti(121, 1);
 		System.out.println();
+		list.printLnikedList();
+		System.out.println();
+		list.deletionFromHead();
+		list.printLnikedList();
+		System.out.println();
+		list.deletionAtIndex(4);
+		list.printLnikedList();
+		System.out.println();
+		list.deletionAtIndex(5);
 		list.printLnikedList();
 	}
 }
