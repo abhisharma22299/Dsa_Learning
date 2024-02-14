@@ -14,7 +14,7 @@ class SingleLinkedList {
 	}
 
 	// implementation of insertion of a node at end
-
+	public static SingleLinkedList list = new SingleLinkedList();
 	public void insertAtEnd(int newData) {
 		Node newNode = new Node(newData);
 		// checking linkedList is empty or not
@@ -108,10 +108,28 @@ class SingleLinkedList {
 		temp.next = temp.next.next;
 		return;
 	}
+// 
+	
+	public void reversalLinkedList() {
+		//SingleLinkedList li=new SingleLinkedList();
+		Node curr =head;
+		Node prev=null;
+		Node nextPtr=null;
+		
+		while(curr!= null) {
+			nextPtr=curr.next;
+			curr.next=prev;
+		prev=curr;
+	curr=nextPtr;
+//		System.out.println("");
 
+		}
+		head=prev;
+		return;
+	}
 	public static void main(String[] args) {
 
-		SingleLinkedList list = new SingleLinkedList();
+		
 		list.insertAtEnd(2);
 		list.insertAtEnd(3);
 		list.insertAtEnd(4);
@@ -138,7 +156,10 @@ class SingleLinkedList {
 		list.deletionAtIndex(4);
 		list.printLnikedList();
 		System.out.println();
-		list.deletionAtIndex(5);
+		//list.deletionAtIndex(5);
+		list.printLnikedList();
+		System.out.println("\nReversal in a linked list");
+		list.reversalLinkedList();
 		list.printLnikedList();
 	}
 }
