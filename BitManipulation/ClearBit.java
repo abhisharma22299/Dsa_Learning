@@ -16,5 +16,4 @@ public class ClearBit {
 		System.out.println(Integer.toBinaryString(result));
 		
 	}
-
 }

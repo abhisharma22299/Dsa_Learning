@@ -24,6 +24,6 @@ public class TowerOfHanoi {
 					 
 					  */
 					
-					towerOfHanio(3, "S","H", "D");
+					towerOfHanio(2, "S","H", "D");
 				}
 }

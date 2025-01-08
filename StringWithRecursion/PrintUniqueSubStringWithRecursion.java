@@ -26,7 +26,7 @@ public class PrintUniqueSubStringWithRecursion {
 		// time complexity O(2^n)
 		System.out.print("{");
 		HashSet<String> set=new HashSet<>();
-		printAllSubSequence("111", 0, "",set);
+		printAllSubSequence("ababa", 0, "",set);
 	System.out.print("}");
 	}
 }

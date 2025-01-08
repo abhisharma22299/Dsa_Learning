@@ -8,7 +8,7 @@ public class SolidRhombusPattern {
 		// printing the pattern of solid rhombus
 				/*
 				 
-				  *****
+			 	  *****
 				 ***** 
 				*****
 			   *****

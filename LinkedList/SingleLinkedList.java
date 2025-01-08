@@ -1,4 +1,5 @@
 package LinkedList;
+import LinkedList.SingleLinkedList.Node;
 import Recursion.printSubsetOfNaturalNumber;
 class SingleLinkedList {
 
@@ -76,7 +77,7 @@ class SingleLinkedList {
 	// implementation of the printing a linked List
 	public void printLnikedList() {
 		Node temp = head;
-		while (temp.next != null) {
+		while (temp!= null) {
 			System.out.print(temp.data + "  ");
 			temp = temp.next;
 		}
@@ -127,39 +128,63 @@ class SingleLinkedList {
 		head=prev;
 		return;
 	}
+	public void printMiddleElement() {
+		Node slow=head;
+		Node fast=head;
+		
+		while(fast!=null &&fast.next!=null&&fast.next.next!=null) {
+			
+			slow=slow.next;
+			fast=fast.next.next;
+		}
+		System.out.println();
+		System.out.println(slow.data);
+	}
+	public  boolean palindrome() {
+		Node curr = head;
+		int i=0;
+		
+		while(curr!=null) {
+			i++;
+			curr=curr.next;
+		}
+		System.out.println(i);
+		int arr[]= new int[i];
+		int rev[]=new int [i];
+		int j=0;
+		curr=head;
+		while(curr!=null) {
+			arr[j++]=curr.data;
+			curr=curr.next;
+		}
+		int n=0;
+		for(int k=i-1;k>=0;k--) {
+			rev[n++]=arr[k];
+		}
+		
+		for(int k:arr)
+			System.out.print(k+" ");
+		System.out.println();
+		for(int k:rev)
+			System.out.print(k+" ");
+		for(int k=0;k<arr.length;k++) {
+			if(arr[k]!=rev[k])
+				return false;
+		}
+		return true;
+	}
 	public static void main(String[] args) {
 
 		
+		list.insertAtEnd(1);
 		list.insertAtEnd(2);
-		list.insertAtEnd(3);
-		list.insertAtEnd(4);
-		list.insertAtEnd(5);
-		list.insertAtEnd(6);
-		list.insertAtEnd(7);
-		list.insertAtEnd(8);
-		list.insertAtEnd(9);
+		list.insertAtEnd(0);
+		list.insertAtEnd(1);
 		list.printLnikedList();
-		list.insertAtFirst(22);
-		System.out.println();
-		list.printLnikedList();
-		list.insertAtFirst(20);
-		System.out.println();
-		list.printLnikedList();
-		// at index
-		list.inserti(121, 1);
-		System.out.println();
-		list.printLnikedList();
-		System.out.println();
-		list.deletionFromHead();
-		list.printLnikedList();
-		System.out.println();
-		list.deletionAtIndex(4);
-		list.printLnikedList();
-		System.out.println();
-		//list.deletionAtIndex(5);
-		list.printLnikedList();
-		System.out.println("\nReversal in a linked list");
-		list.reversalLinkedList();
-		list.printLnikedList();
+		System.out.println("Testing Palindrome");
+
+		System.out.println(list.palindrome());
+
+		
 	}
 }
