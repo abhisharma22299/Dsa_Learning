@@ -6,8 +6,7 @@ package String;
 import java.util.*;
 
 /**
- * input :tree
- * output:eetr or eert 
+ * input :tree output:eetr or eert
  * 
  */
 public class SortCharactersByFrequency {
@@ -72,9 +71,40 @@ public class SortCharactersByFrequency {
 		return result.toString();
 	}
 
+	public static void print(String s) {
+		HashMap<Character, Integer> map = new HashMap<>();
+		char ch[] = s.toCharArray();
+		for (char a : ch) {
+			if (!map.containsKey(a)) {
+				map.put(a, 1);
+
+			} else {
+				map.put(a, map.get(a) + 1);
+			}
+		}
+
+		List<Map.Entry<Character, Integer>> li = new ArrayList<>(map.entrySet());
+
+		Collections.sort(li, (a, b) -> b.getValue() - a.getValue());
+		StringBuilder result = new StringBuilder();
+
+		for (Map.Entry<Character, Integer> set : li) {
+			char temp = set.getKey();
+			Integer freq = set.getValue();
+
+			result.append(String.valueOf(temp));
+
+//				result.append(String.valueOf(temp).repeat(freq));
+		}
+
+		System.out.println(result);
+
+	}
+
 	public static void main(String[] args) {
 		String input = "tree";
-		String sortedString = frequencySort2(input);
-		System.out.println("Sorted by frequency: " + sortedString);
+//		String sortedString = frequencySort2(input);
+//		System.out.println("Sorted by frequency: " + sortedString);
+		print("tree");
 	}
 }
