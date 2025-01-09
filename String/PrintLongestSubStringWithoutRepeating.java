@@ -29,24 +29,7 @@ public class PrintLongestSubStringWithoutRepeating {
 System.out.println(maxLength);
         return maxLength;
     }
-	public static void returnlo(String s) {
-		HashMap<Character,Integer> map=new HashMap<>();
-		int start=0;
-		int maxLength=0;
-		for(int end =0;end <s.length();end++) {
-			char ch =s.charAt(end);
-			if(map.containsKey(ch) && map.get(ch) >=start ) {
-				start =map.get(end)+1;
-			}
-			map.put(ch, end);
-			maxLength=Math.max(maxLength, end -start +1);
-			
-			
-		}
-		System.out.println(maxLength);
-		
-	}
-	public static String print(String s) {
+		public static String print(String s) {
 		// HashMap to store characters and their last seen index
 		HashMap<Character, Integer> charIndexMap = new HashMap<>();
 		int maxLength = 0;
@@ -75,9 +58,12 @@ System.out.println(maxLength);
 		// Return the longest substring
 		return s.substring(longestStart, longestStart + maxLength);
 	}
+	
 
 	public static void main(String[] args) {
+		print1("ABCA");
 		print("ABCA");
-		returnlo("ABC");
+//		System.out.println();
+//		printLongestSubString("ABCAAAA");
 	}
 }
